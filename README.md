@@ -1,6 +1,6 @@
 # Tenzies-Game
 
-![Project ScreenShot](/src/assets/images/link-preview-screenshot.png)
+![Project ScreenShot](src/assets/images/link-preview-screenshot.png)
 
 Interactive and Responsive Grocery-React-App build by React and Typescript
 
