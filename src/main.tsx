@@ -5,13 +5,6 @@ import {StrictMode} from 'react'
 import {BrowserRouter} from 'react-router'
 import App from './App'
 
-// <!-- Normalize.css -->
-//     <link rel="stylesheet" href="/src/assets/css/normalize.css" />
-//     <!-- FontAwesome all.min.css -->
-//     <link
-//       rel="stylesheet"
-//       href="/src/assets/fonts/fontawesome/css/all.min.css"
-//     />
 /* Import All CSS Files as Static files */
 import './assets/css/normalize.css'
 import './assets/fonts/fontawesome/css/all.min.css'
