@@ -1,0 +1,148 @@
+// @use 'variables' as *; is meaning Dart Sass Compiler create a namespace called variables then when use $main-500 will replace to variables.$main-500 and not @use './variables' and 'variables' both are correct and tells compiler this file (variables is exist in the current directory)
+@use 'variables' as *;
+
+/* Reset Elements */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+/* Body and Button Element */
+body,
+div#root,
+.container {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+div#root .container {
+    width: 100%;
+    padding-inline: 12px;
+    margin-inline: auto;
+}
+
+
+
+/* Global Component and Resuable */
+
+/* Special Component */
+@mixin specialComponent() {
+    & {
+        color: #FFF;
+        text-transform: capitalize;
+        background-color: $main-400;
+        padding: 0px 35px;
+        margin-left: -5px;
+        position: relative;
+        z-index: -1;
+    }
+    &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 32px solid transparent;
+        border-left-color: #EEE;
+        z-index: 0;
+        position: absolute;
+        top: 50%;
+        left: -2px;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border: 32px solid transparent;
+        border-right-color: #EEE;
+        z-index: 0;
+        position: absolute;
+        top: 50%;
+        right: -2px;
+        transform: translateY(-50%);
+    }
+}
+
+/* Typegraphy */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+h2 {
+    font-size: clamp(1.75rem, 4vw, 3rem);
+}
+h3 {
+    font-size: clamp(1.50rem, 3.5vw, 2.5rem);
+}
+h4 {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+}
+h5 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+h6 {
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+}
+
+/* Global Media Queries */
+$breakpoints: ("extra small": 576px, "small": 768px, "medium": 992px, "large": 1200px, "extra large": 1400px);
+@mixin mediaQueries() {
+    @each $point, $value in $breakpoints {
+        @if $point == "extra small" {
+            @media (min-width: $value) {
+                .container {
+                    max-width: 540px;
+                }
+            }
+        } @else if $point == "small" {
+            @media (min-width: $value) {
+                .container {
+                    max-width: 720px;
+                }
+            }
+        } @else if $point == "medium" {
+            @media (min-width: $value) {
+                .container {
+                    max-width: 960px;
+                }
+            }
+        } @else if $point == "large" {
+            @media (min-width: $value) {
+                .container {
+                    max-width: 1140px;
+                }
+            }
+        } @else {
+            @media (min-width: $value) {
+                .container {
+                    max-width: 1320px;
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueries();

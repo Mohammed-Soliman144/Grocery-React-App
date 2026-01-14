@@ -1,0 +1,678 @@
+/* Global Variables */
+/* Reset Elements */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* Body and Button Element */
+body,
+div#root,
+.container {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+div#root .container {
+  width: 100%;
+  padding-inline: 12px;
+  margin-inline: auto;
+}
+
+/* Global Component and Resuable */
+/* Special Component */
+/* Typegraphy */
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+h6 {
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* Global Media Queries */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/* Main Components */
+main section.features article, main section.categories > div.articles article, main section.products > div.articles article p, main section.products > div.articles article, main section.hero article, main section article, main section {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+main section.blogs > div.articles article img + p, main section.blogs > div.articles, main section div.articles {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 18px;
+}
+
+main section.products > div.articles {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  user-select: none;
+  cursor: grab;
+}
+
+main section article button, .button-transparent, main section.products > div.articles article div.cart > button {
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 8px 12px;
+  text-transform: capitalize;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: 0.4s ease-out;
+  align-self: flex-start;
+}
+
+.button-transparent, main section.products > div.articles article div.cart > button {
+  transition: 0.5s ease-out;
+}
+.button-transparent:hover, main section.products > div.articles article div.cart > button:hover {
+  color: #FFF;
+  background-color: #FE7434;
+}
+
+/* Our Features Section */
+main {
+  margin-top: 70px;
+  position: relative;
+  padding-block: 0 3.75rem;
+}
+main::before {
+  content: "";
+  height: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: #EEE;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+main section {
+  /* Finished */
+}
+main section.visible > h2 {
+  color: #FE7434;
+}
+main section h2 {
+  margin-block: 60px 40px;
+  text-transform: capitalize;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+}
+main section h2 span {
+  color: #FFF;
+  text-transform: capitalize;
+  background-color: #FE7434;
+  padding: 0px 35px;
+  margin-left: -5px;
+  position: relative;
+  z-index: -1;
+}
+main section h2 span::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 32px solid transparent;
+  border-left-color: #EEE;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  transform: translateY(-50%);
+}
+main section h2 span::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 32px solid transparent;
+  border-right-color: #EEE;
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  right: -2px;
+  transform: translateY(-50%);
+}
+main section article {
+  box-shadow: 2px 1px 3px 1px #777, 2px 4px 6px 1px #888;
+  background-color: #FFF;
+  border: 2px solid #EEE;
+  outline: 8px solid #FFF;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 8px;
+  align-self: stretch;
+}
+main section article h3 {
+  font-size: 1.3rem;
+}
+main section article p {
+  font-size: 0.875rem;
+  white-space: wrap;
+}
+main section article img {
+  width: 50%;
+  object-fit: contain;
+}
+main section article button {
+  align-self: center;
+  transition: 0.5s ease-out;
+}
+main section article button:hover {
+  color: #FFF;
+  background-color: #FE7434;
+}
+main section div.articles {
+  width: 100%;
+}
+main section div.articles article:nth-of-type(2) button, main section div.articles article:nth-of-type(3) button {
+  margin-top: 8px;
+}
+main section.hero {
+  padding-block: 60px;
+}
+main section.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: calc(50% - 50vw);
+  height: 450px;
+  width: 100vw;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+main section.hero article {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  gap: 0;
+  padding: 25px;
+  margin-bottom: 50px;
+}
+main section.hero article h1 {
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
+  font-weight: 600;
+}
+main section.hero article h1 span {
+  color: #FE7434;
+}
+main section.hero article p {
+  padding-inline: 5px;
+  white-space: wrap;
+  font-size: clamp(0.875rem, 3vw, 1.25rem);
+  margin-bottom: 30px;
+  color: #777;
+  width: 600px;
+  max-width: 80%;
+}
+main section.hero article button {
+  padding-inline: 30px;
+}
+main section.products {
+  position: relative;
+  overflow: hidden;
+}
+main section.products > div.articles article {
+  flex: 0 0 30%;
+  border-radius: 2px;
+  margin-inline: 18px;
+  position: relative;
+}
+main section.products > div.articles article p span:first-of-type {
+  font-size: 1.25rem;
+  color: #888;
+  font-weight: 600;
+}
+main section.products > div.articles article p span:last-of-type {
+  color: #FE7434;
+}
+main section.products > div.articles article img {
+  width: 75%;
+  object-fit: cover;
+  object-position: center;
+}
+main section.products > div.articles article::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  border: 2px solid #EEE;
+  opacity: 1;
+  transition: transform 0.6s ease-out;
+}
+main section.products > div.articles article:hover::before {
+  transform: scale(1.05);
+  border: 2px solid #000;
+}
+main section.products > div.articles article div.cart > button {
+  position: relative;
+  z-index: 3;
+}
+main section.products > div.articles article div.cart > button:hover {
+  background-color: #FE7434;
+  cursor: pointer;
+}
+main section.products > div.articles article div.cart > button span {
+  margin-left: 6px;
+  color: #fff;
+  font-weight: 600;
+  background-color: #FE5101;
+  padding: 2px 4px;
+  border-radius: 50%;
+}
+main section.products > div.buttons > button.btn-left {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #FE9767;
+  font-size: 32px;
+  position: absolute;
+  top: 60%;
+  left: 3px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.4;
+  z-index: 2;
+  margin-right: 20px;
+}
+main section.products > div.buttons > button.btn-left:hover {
+  opacity: 1;
+}
+main section.products > div.buttons > button.btn-right {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #FE9767;
+  font-size: 32px;
+  position: absolute;
+  top: 60%;
+  right: -15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.4;
+  z-index: 2;
+  margin-left: 20px;
+}
+main section.products > div.buttons > button.btn-right:hover {
+  opacity: 1;
+}
+main section.features, main section.categories > div.articles {
+  justify-content: space-evenly;
+  padding-block: 12px;
+  padding-inline: 4px;
+}
+main section.features article, main section.categories > div.articles article {
+  margin-inline: 8px;
+  border-radius: 2px;
+  border: none;
+  justify-content: center;
+  gap: 10px;
+  flex: 0 1 25%;
+  width: 25%;
+  position: relative;
+}
+main section.features article img, main section.categories > div.articles article img {
+  width: 100%;
+  object-fit: cover;
+}
+main section.features article::before, main section.categories > div.articles article::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  border: 2px solid #000;
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+main section.features article:hover::before, main section.categories > div.articles article:hover::before {
+  transform: scale(1.05);
+  opacity: 1;
+}
+main section.features > div.articles article {
+  border: none;
+  border-radius: 0;
+  flex: 1 0 25%;
+  width: 25%;
+  position: relative;
+}
+main section.features > div.articles article img {
+  width: 50%;
+}
+main section.features > div.articles article::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  border: 2px solid #EEE;
+  opacity: 1;
+  transition: transform 0.6s ease-out;
+}
+main section.features > div.articles article:hover::before {
+  transform: scale(1.05);
+  border: 2px solid #000;
+}
+main section.reviews {
+  position: relative;
+  overflow: hidden;
+}
+main section.reviews > div.articles {
+  cursor: grab;
+  user-select: contain;
+}
+main section.reviews > div.articles article {
+  margin-inline: 15px;
+  border-radius: 4px;
+  position: relative;
+}
+main section.reviews > div.articles article img {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+main section.reviews > div.articles article span {
+  color: #FE7434;
+}
+main section.reviews > div.articles article::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 6px;
+  border: 2px solid #000;
+  opacity: 0;
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+main section.reviews > div.articles article:hover::before {
+  transform: scale(1.05);
+  opacity: 1;
+}
+main section.reviews > div.buttons > button.btn-left {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #FE9767;
+  font-size: 32px;
+  position: absolute;
+  top: 60%;
+  left: -13px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.4;
+  z-index: 2;
+}
+main section.reviews > div.buttons > button.btn-left:hover {
+  opacity: 1;
+}
+main section.reviews > div.buttons > button.btn-right {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #FE9767;
+  font-size: 32px;
+  position: absolute;
+  top: 60%;
+  right: -13px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0.4;
+  z-index: 2;
+}
+main section.reviews > div.buttons > button.btn-right:hover {
+  opacity: 1;
+}
+main section.blogs > div.articles article {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0 0 8px 0;
+  border: none;
+  outline: none;
+  align-self: stretch;
+  justify-content: space-between;
+  gap: 15px;
+  flex: 25%;
+  width: 25%;
+}
+main section.blogs > div.articles article h3 {
+  text-align: left;
+  padding-inline: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+main section.blogs > div.articles article p {
+  text-align: left;
+  padding-inline: 20px;
+  white-space: wrap;
+}
+main section.blogs > div.articles article img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-top: -3px;
+}
+main section.blogs > div.articles article img + p {
+  position: relative;
+  width: 100%;
+  justify-content: space-around;
+}
+main section.blogs > div.articles article img + p span {
+  text-transform: capitalize;
+  color: #777;
+}
+main section.blogs > div.articles article img + p i {
+  color: #FE7434;
+  padding-right: 20px;
+}
+main section.blogs > div.articles article img + p::after {
+  content: "";
+  width: 90%;
+  height: 1px;
+  background-color: #CDCDCD;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  transform: translateX(-50%);
+  box-shadow: 0px 1px 3px 0px #ddd;
+}
+main section.blogs > div.articles article button {
+  align-self: flex-start;
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  main section.hero img {
+    object-fit: cover;
+    object-position: center;
+  }
+  main section.products > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.products > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 1 0 90%;
+  }
+  main section.reviews > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.reviews > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 1 0 90%;
+  }
+  main section.features > div.articles, main section.categories > div.articles, main section.blogs > div.articles {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  main section.features > div.articles article, main section.categories > div.articles article, main section.blogs > div.articles article {
+    flex: 1 0 90%;
+    width: 90%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  main section.hero img {
+    object-fit: cover;
+    object-position: center;
+  }
+  main section.products > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.products > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 0 0 45%;
+  }
+  main section.reviews > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.reviews > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 0 0 45%;
+  }
+  main section.features > div.articles, main section.categories > div.articles, main section.blogs > div.articles {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 15px;
+  }
+  main section.features > div.articles article, main section.categories > div.articles article, main section.blogs > div.articles article {
+    flex: 0 0 45%;
+    width: 45%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  main section.hero img {
+    object-fit: cover;
+    object-position: center;
+  }
+  main section.products > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.products > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 0 0 46%;
+    width: 320px;
+  }
+  main section.reviews > div.articles {
+    padding: 0;
+    gap: 0;
+  }
+  main section.reviews > div.articles article {
+    border-radius: 2px;
+    margin-inline: 18px;
+    flex: 0 0 46%;
+    width: 320px;
+  }
+  main section.features > div.articles, main section.categories > div.articles, main section.blogs > div.articles {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 15px;
+  }
+  main section.features > div.articles article, main section.categories > div.articles article, main section.blogs > div.articles article {
+    flex: 0 0 46%;
+    width: 46%;
+  }
+}/*# sourceMappingURL=Main.css.map */
