@@ -9,7 +9,7 @@ import Blogs from './Blogs'
 // import Button from '../functions/Button'
 import Button from '../../common/Button'
 import useShopping from '../../../hooks/useShoppingContext'
-import './assets/css/Main.css'
+import '../../../css/Main.css'
 
 export default function MainContent(): React.JSX.Element {
 
