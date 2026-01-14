@@ -3,8 +3,6 @@ import { Fragment } from 'react'
 import { nanoid } from 'nanoid'
 // import features from '../../ts/features'
 import features from '../../../services/ts/features'
-// import '../../css/Main.css'
-import '../../../css/Main.css'
 // Custom Hook to handle IntersectionObserver
 import { useObserver } from '../../../hooks/useObserver'
 import getImage from '../../../utils/helper'
