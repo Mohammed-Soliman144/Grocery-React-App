@@ -16,7 +16,7 @@ const root = createRoot(document.getElementById('root')!);
 root.render(
   <StrictMode>
     {/* use <BrowserRouter> Than Wrap Your App Component inside it </BrowserRouter> */}
-    <BrowserRouter>
+    <BrowserRouter basename='/Grocery-React-App'>
       <App />
     </BrowserRouter>
   </StrictMode>
