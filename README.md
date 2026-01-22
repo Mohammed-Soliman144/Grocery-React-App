@@ -1,4 +1,4 @@
-# Tenzies-Game
+# Grocery-React-App
 
 ![Project ScreenShot](src/assets/images/link-preview-screenshot.png)
 
@@ -26,7 +26,7 @@ que Identifier.
 **3- JavaScript (ES6+)**
 **4- React**
 **5- TypeScript**
-**6- SASS**
+**6- SCSS**
 
 ---
 
